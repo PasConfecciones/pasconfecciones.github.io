@@ -8,12 +8,12 @@
 }
 
 .body {
-    background-image: url(/assets/img/fondo4.jpg);
+    /*background-image: url(/sitioWeb/img/fondo4.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    /*background-color: beige;*/
+    background-attachment: fixed;*/
+    background-color: rgb(248, 255, 230);
 }
 
 .header {
@@ -108,25 +108,29 @@
     margin-bottom: 20px;
 }
 
-.carousel-inner img {
+.carousel-inner {
     width: 100%;
-    height: auto;
+
+    img {
+    width: auto;
+    height: 100vh;
+    object-fit: contain;
+    }
 }
 
 .mision-vision {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
     margin-bottom: 30px;
     gap: 0 30px;
-    color: #ffffff;
+    color: white;
     font-weight: bold;
 }
 
 .mision-vision .item {
     text-align: center;
-    width: 50%;
-    padding: 20px;
+    padding: 3%;
     gap: 20px;
     background-color:#5e2129d7;
     border-radius: 20px;
@@ -136,13 +140,15 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    border: 5px solid #888888;  /* Define el grosor y el color del borde */
     margin-bottom: 15px;
 }
+
 
 .mision-vision .item h2 {
     font-size: 30px;
     margin-bottom: 10px;
-    color: #d1034e;
+    color: #e30052;
     font-weight: bolder;
 }
 
@@ -173,7 +179,7 @@
 .servicios h2 {
     text-align: center;
     font-size: 40px;
-    color: #d1034e; 
+    color: #888888; 
     font-weight: bolder;
 }
 
@@ -274,20 +280,18 @@ footer li a{
     transition: background-color 0.5s;
     transition: padding 0.5s;
     border-radius: 100px;
-    gap: 0 10px;
+    gap: 0 15px;
 
-    svg{height: 6vh; width: auto;
+    svg{height: 5vh; min-width: 4vh;
     padding-bottom: 4px;}
 }
 
 
+
 .footer .contacto li{
-    justify-content: center;
-    align-items: center;
     display: flex;
-    gap: 0 10px;
-    svg{height: 5vh; width: auto;
-        padding-bottom: 4px;}
+    gap: 0 15px;
+    svg{height: 5vh; min-width: 4vh;}
 }
 
 .footer li a:hover {
@@ -407,8 +411,8 @@ footer li a{
 
     .footer .contacto li{
         svg{
-            height: vh;
-            width: auto;
+            height: 6vh;
+            min-width: 5vh;
             padding-bottom: 3px;
         }
     }
@@ -441,6 +445,7 @@ footer li a{
 
 /* Ocultar los enlaces del menú y mostrar solo el botón hamburguesa en pantallas pequeñas */
 @media screen and (max-width: 954px) {
+
     #menu {
         display: none; /* El menú estará oculto por defecto */
         flex-direction: column; /* Asegura que los items se apilen verticalmente */
