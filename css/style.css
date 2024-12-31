@@ -226,6 +226,18 @@
     text-align: justify;
 }
 
+/* Estilo para el enlace (eliminando subrayado y borde) */
+.servicios .tarjeta-link {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto */
+}
+
+/* Elimina el borde azul cuando el enlace es enfocado */
+.servicios .tarjeta-link:focus {
+    outline: none; /* Elimina el borde de foco */
+}
+
+
 /* Botón al final de las tarjetas */
 .button-container {
     display: flex;
@@ -453,9 +465,6 @@ footer li a{
             }
         }
     }
-
-
-    
 
     .geolocalizacion iframe {
         height: 250px; /* Ajustar la altura en pantallas pequeñas */
