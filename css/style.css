@@ -8,12 +8,7 @@
 }
 
 .body {
-    /*background-image: url(/sitioWeb/img/fondo4.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;*/
-    background-color: rgb(248, 255, 230);
+    background-color: rgb(255, 240, 240);
 }
 
 .header {
@@ -35,7 +30,8 @@
 }
 
 .logo img {
-    width: 100px;
+    width: 175px;
+    border-radius: 25px;
 }
 
 .navegacion {
@@ -124,7 +120,7 @@
     align-items: center;
     margin-bottom: 30px;
     gap: 0 30px;
-    color: white;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -140,15 +136,13 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 5px solid #888888;  /* Define el grosor y el color del borde */
     margin-bottom: 15px;
 }
-
 
 .mision-vision .item h2 {
     font-size: 30px;
     margin-bottom: 10px;
-    color: #e30052;
+    color: #d1034e;
     font-weight: bolder;
 }
 
@@ -159,51 +153,51 @@
     text-align: justify;
 }
 
+/* Fondo del contenedor padre */
 .servicios {
-    background-color: #5e2129d7;
+    background-color: #5e2129d7; /* Fondo original */
     color: white;
     border-radius: 20px;
     padding: 20px;
     margin-bottom: 30px;
+    h2{
+        color: #b70546;
+        font-weight: bolder;
+    }
 }
 
+/* Contenedor general */
 .servicios .container {
-    display: flex;          
-    flex-direction: column; 
-    align-items: center;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 20px;              
-    text-align: center;   
+    gap: 20px;
 }
 
-.servicios h2 {
-    text-align: center;
-    font-size: 40px;
-    color: #888888; 
-    font-weight: bolder;
-}
-
+/* Contenedor de tarjetas */
 .servicios .contenedor-tarjetas {
-    display: flex;          
-    align-items: center;    
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;        
-    gap: 50px;             
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 100%; /* Ocupa todo el ancho disponible */
 }
 
-
+/* Estilo de las tarjetas */
 .servicios .tarjeta {
-    background-color: #949393b9;
+    background-color: #949393b9; /* Fondo de tarjeta */
     color: white;
     font-weight: bolder;
     width: 300px;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición original */
 }
 
 .servicios .tarjeta:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Efecto al pasar el cursor */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -213,6 +207,7 @@
     object-fit: cover;
 }
 
+/* Contenido de las tarjetas */
 .servicios .tarjeta .contenido {
     padding: 15px;
 }
@@ -228,7 +223,33 @@
 .servicios .tarjeta .descripcion {
     font-size: 20px;
     color: #5e2129;
-    text-align:justify;
+    text-align: justify;
+}
+
+/* Botón al final de las tarjetas */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Estilo del botón */
+.btn-pay {
+    display: inline-block;
+    padding: 20px 50px; /* Incrementa el padding para hacerlo más grande */
+    font-size: 1.4rem; /* Aumenta el tamaño de la fuente */
+    color: white;
+    background-color: #5e2129; /* Color original */
+    text-decoration: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    box-shadow: 0 6px 8px rgba(94, 33, 41, 0.4); /* Ajusta la sombra */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-pay:hover {
+    background-color: #9b053c; /* Color al pasar el cursor */
+    transform: scale(1.1); /* Un poco más grande al pasar el cursor */
 }
 
 .footer {
@@ -288,11 +309,22 @@ footer li a{
 
 
 
-.footer .contacto li{
+.footer .contacto li {
     display: flex;
     gap: 0 15px;
-    svg{height: 5vh; min-width: 4vh;}
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+    align-items: center; /* Alinea el texto con los íconos verticalmente */
 }
+
+.footer .contacto li svg {
+    height: 5vh;
+    min-width: 4vh;
+}
+
+.footer .contacto li span {
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+}
+
 
 .footer li a:hover {
     color: rgb(255, 255, 255);
@@ -391,6 +423,7 @@ footer li a{
         margin-bottom: 20px;
     }
     
+    
     .footer {
         flex-direction: column; 
         align-items: center;
@@ -409,13 +442,20 @@ footer li a{
         font-size: 25px; 
     }
 
-    .footer .contacto li{
-        svg{
-            height: 6vh;
-            min-width: 5vh;
-            padding-bottom: 3px;
+    @media (max-width: 352px) {
+
+        .footer .contacto li{
+            font-size: small;
+            svg{
+                height: 3vh;
+                min-width: 3vh;
+                padding-bottom: 1px;
+            }
         }
     }
+
+
+    
 
     .geolocalizacion iframe {
         height: 250px; /* Ajustar la altura en pantallas pequeñas */
@@ -437,9 +477,10 @@ footer li a{
     }
 }
 
-@media (max-width: 1000px) {
-    .servicios .tarjeta {
-        width: 100%; 
+@media (max-width: 1337px) {
+    /* Para pantallas pequeñas (móviles), mostramos 2 tarjetas por fila */
+    #Servicios .contenedor-tarjetas {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
